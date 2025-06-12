@@ -1,0 +1,30 @@
+[__main__    ]Loaded 2 geometries from geoin.xyz
+[interpolation]Inserting image between 0 and 1 with Cartesian RMSD      1.031.  New length:3
+[interpolation]Inserting image between 1 and 2 with Cartesian RMSD      0.665.  New length:4
+[interpolation]Inserting image between 2 and 3 with Cartesian RMSD      0.403.  New length:5
+[interpolation]Inserting image between 0 and 1 with Cartesian RMSD      0.370.  New length:6
+[interpolation]Inserting image between 2 and 3 with Cartesian RMSD      0.266.  New length:7
+[interpolation]Inserting image between 5 and 6 with Cartesian RMSD      0.225.  New length:8
+[interpolation]Inserting image between 1 and 2 with Cartesian RMSD      0.201.  New length:9
+[geodesic    ]Maximum RMSD change in initial path:       0.18
+[geodesic    ]Performing geodesic smoothing
+[geodesic    ]  Images:    9  Atoms   11 Rijs     42
+[geodesic    ]  Degree of freedoms    231: 
+[geodesic    ]  Iteration   0: Length      1.494 |dL|=1.525e-01
+[geodesic    ]  Iteration   1: Length      5.917 |dL|=6.297e+00
+[geodesic    ]  Iteration   2: Length      1.616 |dL|=9.823e-02
+[geodesic    ]  Iteration   3: Length      1.778 |dL|=1.734e-01
+[geodesic    ]  Iteration   4: Length      1.486 |dL|=1.802e-02
+[geodesic    ]  Iteration   5: Length      1.603 |dL|=7.442e-02
+[geodesic    ]  Iteration   6: Length      1.485 |dL|=1.662e-02
+[geodesic    ]  Iteration   7: Length      1.485 |dL|=1.828e-02
+[geodesic    ]  Iteration   8: Length      1.484 |dL|=2.067e-02
+[geodesic    ]  Iteration   9: Length      1.483 |dL|=2.364e-02
+[geodesic    ]  Iteration  10: Length      1.480 |dL|=2.640e-02
+[geodesic    ]  Iteration  11: Length      1.480 |dL|=2.902e-02
+[geodesic    ]  Iteration  12: Length      1.460 |dL|=4.617e-03
+[geodesic    ]  Iteration  13: Length      1.458 |dL|=8.773e-03
+[geodesic    ]  Iteration  14: Length      1.456 |dL|=5.919e-03
+[geodesic    ]Smoothing converged after 15 iterations
+[geodesic    ]Final path length:      1.45593  Max RMSD in path:       0.33
+[__main__    ]Saving final path to file interpolated.xyz
