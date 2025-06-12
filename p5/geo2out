@@ -1,0 +1,21 @@
+[__main__    ]Loaded 2 geometries from geoin.xyz
+[interpolation]Inserting image between 0 and 1 with Cartesian RMSD      0.318.  New length:3
+[interpolation]Inserting image between 0 and 1 with Cartesian RMSD      0.168.  New length:4
+[interpolation]Inserting image between 2 and 3 with Cartesian RMSD      0.153.  New length:5
+[interpolation]Inserting image between 0 and 1 with Cartesian RMSD      0.089.  New length:6
+[interpolation]Inserting image between 2 and 3 with Cartesian RMSD      0.080.  New length:7
+[interpolation]Inserting image between 5 and 6 with Cartesian RMSD      0.078.  New length:8
+[interpolation]Inserting image between 4 and 5 with Cartesian RMSD      0.076.  New length:9
+[geodesic    ]Maximum RMSD change in initial path:       0.05
+[geodesic    ]Performing geodesic smoothing
+[geodesic    ]  Images:    9  Atoms   11 Rijs     47
+[geodesic    ]  Degree of freedoms    231: 
+[geodesic    ]  Iteration   0: Length      1.504 |dL|=4.540e-02
+[geodesic    ]  Iteration   1: Length      1.425 |dL|=2.242e-02
+[geodesic    ]  Iteration   2: Length      1.415 |dL|=2.270e-02
+[geodesic    ]  Iteration   3: Length      1.390 |dL|=6.197e-03
+[geodesic    ]  Iteration   4: Length      1.392 |dL|=7.907e-03
+[geodesic    ]  Iteration   5: Length      1.388 |dL|=1.188e-03
+[geodesic    ]Smoothing converged after 6 iterations
+[geodesic    ]Final path length:      1.38805  Max RMSD in path:       0.10
+[__main__    ]Saving final path to file interpolated.xyz
