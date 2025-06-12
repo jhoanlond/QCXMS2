@@ -1,0 +1,133 @@
+      -----------------------------------------------------------      
+     |                   =====================                   |     
+     |                   =       QCxMS2      =                   |     
+     |                   =====================                   |     
+     |                      J. Gorges                            |     
+     |                      S. Grimme                            |     
+     |          Mulliken Center for Theoretical Chemistry        |     
+     |                    University of Bonn                     |     
+      -----------------------------------------------------------      
+
+   * QCxMS2 version 1.0.0 (7e45637) compiled by 'gorges@joey' on 2025-01-20
+   QCxMS2 is free software: you can redistribute it and/or modify it under
+   the terms of the GNU Lesser General Public License as published by
+   the Free Software Foundation, either version 3 of the License, or
+   (at your option) any later version.
+   
+   QCxMS2 is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU Lesser General Public License for more details.
+   
+
+ Command line input:
+ > qcxms2 in.xyz -T 16 -geolevel wb97x3c -tslevel wb97x3c -iplevel wb97x3c -ip2level wb97x3c
+
+input file given: in.xyz
+Settings:
+************************************************************
+            + Positive Ion mode +
+IEE distribution: poisson                                                                         
+width of IEE distribution (eimpw) is:  0.10
+energy per atom (ieeatm) is:  0.80 eV
+eimp0 is: 70.00 eV
+ spectral mode: EI-MS
+QM methods used:
+  Level for geometry optimizations and path searches: wb97x3c
+  Level for reaction energy and barrier calculations: wb97x3c
+  Level for IP prescreening: wb97x3c
+ Runtime settings used:
+ Number of cores used: 16
+ Number of allowed subsequent fragmentations: 6
+ Intensity threshold for further fragmentation: 1.00%
+************************************************************
+ External programs used:
+/home/alejandro/anaconda3/bin/xtb
+/home/alejandro/anaconda3/bin/crest
+/home/alejandro/orca_6_0_1/orca
+xtb path set for orca: /home/alejandro/anaconda3/bin/xtb
+/home/alejandro/anaconda3/bin/molbar
+/home/alejandro/anaconda3/bin/geodesic_interpolate
+
+ 
+ Optimizing starting structure at the wb97x3c level
+ Compute IP at level wb97x3c
+ 1 2 
+ 
+IP of input molecule is     9.711 eV
+ Average temperature set to        3782  K
+ Generate energy distribution for IEE
+ Poisson distribution to approximate IEE
+ 
+ --------------------------------
+ | Starting first fragmentation |
+ --------------------------------
+ 
+Generate new fragments with CREST within energy window of    608.80 kcal/mol
+ using gfn2 instead ofwb97x3c for CREST msreact
+ crestcall is: 
+ crest infrag.xyz --msreact --mslargeprint --msnbonds 3 --chrg 1 --uhf 1 --T 16 
+ --gfn2 --ewin  608.79849 --msnshifts 0 --msnshifts2 0 --msattrh --msmolbar --ms
+ input crestms.inp > msreact.out 2>cresterror.out
+          18 
+  new fragment pairs 'pairs.xyz' and 'isomers.xyz' were generated and written to
+  pXX directories
+          18  fragment structures fragment.xyz were written to pXXfX directories
+Time spent for MSREACT calculation:        5.1s
+ Generated fragments were read from msreact.out
+ Number of generated fragments and isomers is          24           6
+ starting            6  GFN-FF optimizations in parallel before topology check
+ 1 2 3 4 5 6 
+ 
+ starting            6  topo calculations in parallel:
+ 1 2 3 4 5 6 
+ Check product topology after optimization
+ 1 2 3 4 5 6 
+ 
+ remaining number of products is:           18
+ starting           40 wb97x3c optimizations in parallel
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 
+ starting            0 wb97x3crestarted optimizations in parallel
+ fragment p15f1
+  dissociated upon charged optimization, take neutrally charged geometry instead
+ 
+ remaining number of products is:           18
+ Computing statistical charges via Delta SCF procedure
+ starting           48 wb97x3c calculations in parallel
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 
+ starting            0 wb97x3crestart IP calculations in parallel
+ 
+ remaining number of products is:           18
+Time spent for IP calculation:      100.3s
+ 
+ Optimizing products at assigned charge
+ starting            6 wb97x3c optimizations in parallel
+ 1 2 3 4 5 6 
+ starting            0 wb97x3c restarted optimizations in parallel
+ Check product topology after optimization
+ 1 2 3 4 5 6 
+ p11 is a duplicate of p5
+          11  is a duplicate of            5
+ 
+ 
+ remaining number of products is:           17
+ Computing reaction energy of fragmentation
+ Starting            5  fragment pair calculations in parallel at wb97x3c level
+ 1 2 3 4 5 
+ Starting            0  restart product calculations in parallel at wb97x3c
+  level
+ 
+ Starting           29  SPH calculations in parallel at wb97x3c level
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 
+ Starting            0  restart SPH calculations in parallel at wb97x3c level
+ 
+ Sorting out fragmentpairs which are too high in energy
+Internal energy of H-diss to fragpair p9 scaled with 0.50
+Internal energy of H-diss to fragpair p10 scaled with 0.50
+Internal energy of H-diss to fragpair p13 scaled with 0.50
+Internal energy of H-diss to fragpair p17 scaled with 0.50
+ remaining number of products is:           17
+ from           17  fragment pairs           17  are left after sorting step
+ Remaining Pairs:          17
+ Search for transition states for          17  pairs
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 

@@ -1,0 +1,9 @@
+forrtl: severe (124): Invalid command supplied to EXECUTE_COMMAND_LINE
+Image              PC                Routine            Line        Source
+qcxms2             00000000004931AA  tsmod_mp_prepneb_        1121  tsmod.f90
+qcxms2             00000000004823F4  tsmod_mp_tssearch         147  tsmod.f90
+qcxms2             00000000004A28F3  fragmentation_mp_         232  fragmentation.f90
+qcxms2             00000000004042CB  MAIN__                    177  main.f90
+qcxms2             0000000000402CED  Unknown               Unknown  Unknown
+qcxms2             00000000006C2810  Unknown               Unknown  Unknown
+qcxms2             0000000000402BCE  Unknown               Unknown  Unknown

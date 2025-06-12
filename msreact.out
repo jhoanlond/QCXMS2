@@ -1,0 +1,195 @@
+
+       ╔════════════════════════════════════════════╗
+       ║            ___ ___ ___ ___ _____           ║
+       ║           / __| _ \ __/ __|_   _|          ║
+       ║          | (__|   / _|\__ \ | |            ║
+       ║           \___|_|_\___|___/ |_|            ║
+       ║                                            ║
+       ║  Conformer-Rotamer Ensemble Sampling Tool  ║
+       ║          based on the xTB methods          ║
+       ║                                            ║
+       ╚════════════════════════════════════════════╝
+       Version 3.0.2, Thu, 29 August 14:20:46, 08/29/2024
+       commit (65685a7) compiled by 'usr@d37571da525e'
+
+   Cite work conducted with this code as
+
+   • P.Pracht, F.Bohle, S.Grimme, PCCP, 2020, 22, 7169-7192.
+   • S.Grimme, JCTC, 2019, 15, 2847-2862.
+   • P.Pracht, S.Grimme, C.Bannwarth, F.Bohle, S.Ehlert,
+     G.Feldmann, J.Gorges, M.Müller, T.Neudecker, C.Plett,
+     S.Spicher, P.Steinbach, P.Wesołowski, F.Zeller,
+     J. Chem. Phys., 2024, 160, 114110.
+
+   for works involving QCG cite
+
+   • S.Spicher, C.Plett, P.Pracht, A.Hansen, S.Grimme,
+     JCTC, 2022, 18 (5), 3174-3189.
+   • C.Plett, S. Grimme,
+     Angew. Chem. Int. Ed. 2023, 62, e202214477.
+
+   for works involving MECP screening cite
+
+   • P.Pracht, C.Bannwarth, JCTC, 2022, 18 (10), 6370-6385.
+
+   Original code
+     P.Pracht, S.Grimme, Universität Bonn, MCTC
+   with help from (alphabetical order):
+     C.Bannwarth, F.Bohle, S.Ehlert, G.Feldmann, J.Gorges,
+     S.Grimme, C.Plett, P.Pracht, S.Spicher, P.Steinbach,
+     P.Wesolowski, F.Zeller
+
+   Online documentation is available at
+   https://crest-lab.github.io/crest-docs/
+
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+   GNU Lesser General Public License (LGPL) for more details.
+
+ Command line input:
+ $ crest infrag.xyz --msreact --mslargeprint --msnbonds 3 --chrg 1 --uhf 1 --T 16 --gfn2 --ewin 608.79849 --msnshifts 0 --msnshifts2 0 --msattrh --msmolbar --msinput crestms.inp
+
+  --chrg 1
+  --uhf 1
+  --T 16 (CPUs/Threads selected)
+  --gfn2               : Use of GFN2-xTB requested.
+  --ewin 608.79849
+
+> Setting up backup calculator ... done.
+ ----------------
+ Calculation info
+ ----------------
+> User-defined calculation level:
+ : xTB calculation via tblite lib
+ : GFN2-xTB level
+ :   Molecular charge    : 1
+ :   UHF parameter       : 1
+ :   Fermi temperature   : 300.00000
+ :   Accuracy            : 1.00000
+ :   max SCC cycles      : 500
+
+
+  ========================================
+  |                                      |
+  |               MSREACT                |
+  | automated MS fragment generator      |
+  |                                      |
+  |       University of Bonn, MCTC       |
+  ========================================
+   S. Grimme, P. Pracht, J. Gorges.
+
+   Cite work conducted with this code as
+
+   Philipp Pracht, Stefan Grimme, Christoph Bannwarth, Fabian Bohle, Sebastian Ehlert, Gereon Feldmann,
+   Johannes Gorges, Marcel Müller, Tim Neudecker, Christoph Plett, Sebastian Spicher, Pit Steinbach,
+   Patryk A. Wesolowski, and Felix Zeller J. Chem. Phys., 2024, submitted.
+
+
+ -------------------------
+ xTB Geometry Optimization
+ -------------------------
+ Input energy successfully calculated.
+ Reading <crestms.inp> file
+>fragdist 2.500000                       
+
+ LMO calculation ... done.
+Protonation sites at atom positions:    5    3    4
+ Add attractive potential for H-shifts:
+ # of distortions          49
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49
+ done.
+ All structures written to file <crest_allproducts.xyz>
+ Detect fragments
+removed multiple fragmented structures:  16
+ Increase distance of fragments by 2.50000000 Angstrom
+ Remaining structures:          48
+ Calling molbar for sorting out duplicates by molbar
+removed duplicates of 1:  27 28 30 32 33
+removed duplicates of 2:  3 4 5 6 10 11 12
+removed duplicates of 7:  14 17 23
+removed duplicates of 8:  9 19
+removed duplicates of 13:  24
+removed duplicates of 15:  42 43
+removed duplicates of 16:  21 22
+removed duplicates of 25:  39 41
+removed duplicates of 26:  29 45 46
+removed duplicates of 31:  34 48
+removed duplicates of 37:  38
+ sorted out           30  fragments accoding to topology check
+ number of products is now:          18
+Calling CREGEN routine and sort out structures above energy window of  608.7985 kcal/mol
+ All unique structures written to file <crest_unique_products.xyz>
+CREGEN> running RMSDs ... done.
+ reading product structures file crest_msreact_products.xyz
+ Remaining structures after cregen:          18
+ Detect fragments
+ writing isomers to <isomers.xyz> and fragmentpairs to <fragmentpairs.xyz
+ writing products to <crest_msreact_products.xyz>
+ writing product structures and molecular masses to directories
+========================================================
+ number of printed structures: 18
+  directory | fragment type | rel. energy [kcal/mol]
+  fragmentpair: | sumformula | molecular mass
+  p1              isomer      -41.28979214
+  p2              isomer      -34.63659157
+  p3              isomer      -20.40404291
+  p4              isomer      -19.89126099
+  p5              isomer      -17.23491298
+  p6        fragmentpair      -12.10232474
+   p6f1                     H5C2          29.06118
+   p6f2                   H1C1O2          45.01749
+  p7        fragmentpair       -6.61914695
+   p7f1                   H5C2O1          45.06058
+   p7f2                   H1C1O1          29.01808
+  p8        fragmentpair       -5.51872124
+   p8f1                   H4C2O1          44.05264
+   p8f2                   H2C1O1          30.02602
+  p9        fragmentpair       -1.75076530
+   p9f1                   H5C3O2          73.07072
+   p9f2                       H1           1.00794
+ p10        fragmentpair        8.99774408
+  p10f1                   H5C3O2          73.07072
+  p10f2                       H1           1.00794
+ p11              isomer       11.50736155
+ p12        fragmentpair       17.18046135
+  p12f1                     H5C2          29.06118
+  p12f2                   H1C1O2          45.01749
+ p13        fragmentpair       20.59549342
+  p13f1                   H5C3O2          73.07072
+  p13f2                       H1           1.00794
+ p14        fragmentpair       25.27848995
+  p14f1                     H3C1          15.03456
+  p14f2                   H3C2O2          59.04410
+ p15        fragmentpair       25.50018277
+  p15f1                   H5C2O1          45.06058
+  p15f2                   H1C1O1          29.01808
+ p16        fragmentpair       40.36573789
+  p16f1                   H4C3O1          56.06338
+  p16f2                     H2O1          18.01529
+ p17        fragmentpair       44.49564757
+  p17f1                   H5C3O2          73.07072
+  p17f2                       H1           1.00794
+ p18        fragmentpair       72.14387815
+  p18f1                   H5C2O1          45.06058
+  p18f2                   H1C1O1          29.01808
+========================================================
+
+ Number of generated isomers:            6
+ Number of generated fragmentpairs:           12
+
+ -----------------
+ Wall Time Summary
+ -----------------
+ CREST runtime (total)               0 d,  0 h,  0 min,  5.045 sec
+ ------------------------------------------------------------------
+ MSREACT                    ...        0 min,  4.994 sec ( 98.998%)
+ I/O and setup              ...        0 min,  0.051 sec (  1.002%)
+ ------------------------------------------------------------------
+ * wall-time:     0 d,  0 h,  0 min,  5.045 sec
+ *  cpu-time:     0 d,  0 h,  0 min,  0.552 sec
+ * ratio c/w:     0.109 speedup
+ ------------------------------------------------------------------
+ * Total number of energy+grad calls: 1
+
+ CREST terminated normally.
